@@ -1,3 +1,5 @@
+image: node:13.11.0
+
 stages:
   - release
   - publish
@@ -9,12 +11,12 @@ before_script:
 
 release:
   stage: release
-  image: node:13
   before_script:
+    - apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
     - npm install --global semantic-release @semantic-release/gitlab @semantic-release/changelog @semantic-release/git
   script:
     - NPM_APP_VERSION=$(node -p "require('./package.json').version")
-    - GL=$GITLAB_TOKEN NPM_TOKEN=$NPM_TOKEN semantic-release
+    - GL_TOKEN=$GITLAB_TOKEN NPM_TOKEN=$NPM_TOKEN semantic-release
     - npm version $NPM_APP_VERSION
   only:
     refs:
@@ -24,7 +26,6 @@ release:
 
 publish:
   stage: publish
-  image: node:13
   script:
     - npm publish
   after_script:
