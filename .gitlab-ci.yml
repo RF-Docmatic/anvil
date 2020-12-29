@@ -14,7 +14,7 @@ release:
     - npm install semantic-release @semantic-release/gitlab @semantic-release/changelog @semantic-release/git
   script:
     - NPM_APP_VERSION=$(node -p "require('./package.json').version")
-    - GITLAB_TOKEN=$GITLAB_TOKEN NPM_TOKEN=$NPM_TOKEN semantic-release
+    - GITLAB_TOKEN=$GITLAB_TOKEN NPM_TOKEN=$NPM_TOKEN npx semantic-release
     - npm version $NPM_APP_VERSION
   only:
     refs:
