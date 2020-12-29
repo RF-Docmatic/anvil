@@ -17,7 +17,6 @@ release:
   script:
     - NPM_APP_VERSION=$(node -p "require('./package.json').version")
     - GL_TOKEN=$GITLAB_TOKEN NPM_TOKEN=$NPM_TOKEN semantic-release
-    - npm version $NPM_APP_VERSION --allow-same-version
   only:
     refs:
       - master
