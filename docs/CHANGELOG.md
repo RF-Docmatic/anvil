@@ -1,3 +1,10 @@
+## [1.0.1](https://git.randomforest.eu/hephaestus/anvil/compare/v1.0.0...v1.0.1) (2020-12-29)
+
+
+### Bug Fixes
+
+* **ci:** add  parameter to the npm script ([e5395ae](https://git.randomforest.eu/hephaestus/anvil/commit/e5395ae423418e5c35679b618df2372d2f35c20f))
+
 # 1.0.0 (2020-12-29)
 
 

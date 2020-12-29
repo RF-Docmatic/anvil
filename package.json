@@ -1,6 +1,6 @@
 {
   "name": "@rfc/anvil",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Experimental internal CLI tool to import and use premade configs and templates.",
   "main": "src/index.js",
   "bin": {
