@@ -2,6 +2,11 @@ stages:
   - release
   - publish
 
+before_script:
+  - npm config set @rfc:registry https://$REGISTRY_NPM_PRIVATE/
+  - npm config set //$REGISTRY_NPM_PRIVATE/:_authToken=$NPM_TOKEN
+  - npm install
+
 release:
   stage: release
   image: node:13
@@ -20,10 +25,6 @@ release:
 publish:
   stage: publish
   image: node:13
-  before_script:
-    - npm install
-    - echo registry=https://$REGISTRY_NPM_PRIVATE/ >> .npmrc
-    - echo _auth=$NPM_TOKEN >> .npmrc
   script:
     - npm publish
   after_script:
