@@ -1,9 +1,10 @@
 {
-  "name": "anvil",
+  "name": "@rfc/anvil",
   "version": "1.0.0",
   "description": "Experimental internal CLI tool to import and use premade configs and templates.",
   "main": "src/index.js",
   "bin": {
+    "@rfc/anvil": "bin/anvil",
     "anvil": "bin/anvil"
   },
   "scripts": {
@@ -14,7 +15,7 @@
     "url": "git@git.randomforest.eu:hephaestus/anvil.git"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://repository.randomforest.eu/repository/rf-npm-hosted/"
   },
   "keywords": [
     "cli",
@@ -30,5 +31,13 @@
     "inquirer": "^7.3.3",
     "listr": "^0.14.3",
     "ncp": "^2.0.0"
-  }
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ]
 }

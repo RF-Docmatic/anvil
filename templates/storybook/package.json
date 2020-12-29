@@ -1,6 +1,6 @@
 {
   "name": "anvil-storybook-template",
-  "version": "1.0.0",
+  "version": "1.2.0-alpha.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -44,5 +44,6 @@
     "build-storybook": "build-storybook"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "374d1224e5e948e115b26acd72fa3885e27f091e"
 }
