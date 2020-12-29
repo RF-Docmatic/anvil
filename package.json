@@ -1,0 +1,34 @@
+{
+  "name": "anvil",
+  "version": "1.0.0",
+  "description": "Experimental internal CLI tool to import and use premade configs and templates.",
+  "main": "src/index.js",
+  "bin": {
+    "anvil": "bin/anvil"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.randomforest.eu:hephaestus/anvil.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "anvil"
+  ],
+  "author": "morteify",
+  "license": "MIT",
+  "dependencies": {
+    "arg": "^5.0.0",
+    "chalk": "^4.1.0",
+    "esm": "^3.2.25",
+    "execa": "^5.0.0",
+    "inquirer": "^7.3.3",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0"
+  }
+}
