@@ -1,3 +1,10 @@
+## [1.0.2](https://git.randomforest.eu/hephaestus/anvil/compare/v1.0.1...v1.0.2) (2020-12-29)
+
+
+### Bug Fixes
+
+* **ci:** remove npm version script ([48bfdbc](https://git.randomforest.eu/hephaestus/anvil/commit/48bfdbcf51cc2f0ccd577adbf2f5e666ab87698c))
+
 ## [1.0.1](https://git.randomforest.eu/hephaestus/anvil/compare/v1.0.0...v1.0.1) (2020-12-29)
 
 
