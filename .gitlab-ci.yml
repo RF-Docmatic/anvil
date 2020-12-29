@@ -1,0 +1,32 @@
+stages:
+  - release
+  - publish
+
+release:
+  stage: release
+  image: node:13
+  before_script:
+    - npm install semantic-release @semantic-release/gitlab @semantic-release/changelog @semantic-release/git
+  script:
+    - NPM_APP_VERSION=$(node -p "require('./package.json').version")
+    - GITLAB_TOKEN=$GITLAB_TOKEN NPM_TOKEN=$NPM_TOKEN semantic-release
+    - npm version $NPM_APP_VERSION
+  only:
+    refs:
+      - master
+    variables:
+      - $CI_COMMIT_MESSAGE !~ /chore\(release\)/
+
+publish:
+  stage: publish
+  image: node:13
+  before_script:
+    - npm install
+    - echo registry=https://$REGISTRY_NPM_PRIVATE/ >> .npmrc
+    - echo _auth=$NPM_TOKEN >> .npmrc
+  script:
+    - npm publish
+  after_script:
+    - rm -rf .npmrc
+  only:
+    - tags
