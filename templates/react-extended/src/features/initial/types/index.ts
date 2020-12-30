@@ -11,7 +11,6 @@ export interface InitialScreen {
 }
 
 /** InitialEpic */
-
 export type FetchRandomFactSourceActions =
   | typeof initialActions.fetchRandomFactStart
   | typeof initialActions.fetchRandomFactDone

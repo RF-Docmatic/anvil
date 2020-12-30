@@ -25,6 +25,7 @@ export const CenterSection = styled.div`
 export const Title = styled.p`
   color: #ededed;
   max-width: 700px;
+  margin-top: 2em;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;

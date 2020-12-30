@@ -14,11 +14,7 @@ module.exports = {
           {
             loader: require.resolve("babel-loader"),
             options: {
-              presets: [
-                "@babel/preset-env",
-                "@babel/preset-react",
-                "@babel/preset-typescript",
-              ],
+              presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
             },
           },
         ],
