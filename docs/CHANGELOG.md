@@ -1,3 +1,13 @@
+# [1.1.0](https://git.randomforest.eu/hephaestus/anvil/compare/v1.0.2...v1.1.0) (2020-12-30)
+
+
+### Features
+
+* **react-base:** add test config ([9f474c0](https://git.randomforest.eu/hephaestus/anvil/commit/9f474c048c498cbb28f4ac583eb78bfe5155fc21))
+* **react-extended:** add ant-design config ([a5a7d7b](https://git.randomforest.eu/hephaestus/anvil/commit/a5a7d7b0ac7b2289ce47c245a2654fc6a629d397))
+* **react-extended:** add prettier config ([663d574](https://git.randomforest.eu/hephaestus/anvil/commit/663d574316164fb5f65a7cf25d3bb48588027550))
+* **react-extended:** add redux-toolkit and redux-observable config ([82de09e](https://git.randomforest.eu/hephaestus/anvil/commit/82de09ef1dc1fc1af2be330dd321b4dfd31cd9bb))
+
 ## [1.0.2](https://git.randomforest.eu/hephaestus/anvil/compare/v1.0.1...v1.0.2) (2020-12-29)
 
 
