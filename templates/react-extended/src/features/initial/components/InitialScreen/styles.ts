@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import rfLogoLight from "../../../assets/images/rf-logo-light.png";
+import { rfLogoLight } from "../../../../assets/images";
 
 export const Container = styled.div`
   width: 100vw;
@@ -24,9 +24,10 @@ export const CenterSection = styled.div`
 
 export const Title = styled.p`
   color: #ededed;
-  font-size: 24px;
+  max-width: 700px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
 `;
