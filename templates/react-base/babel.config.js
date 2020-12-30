@@ -1,20 +1,9 @@
 module.exports = (api) => {
   // This caches the Babel config
   api.cache.using(() => process.env.NODE_ENV);
-  return {
-    presets: [
-      [
-        "@babel/preset-env",
-        {
-          debug: true,
-        },
-      ],
-      "@babel/preset-react",
-      "@babel/preset-typescript",
-    ],
-    // Applies the react-refresh Babel plugin on non-production modes only
-    ...(!api.env("production") && {
-      plugins: [
+
+  const plugins = !(api.env("production") || api.env("test"))
+    ? [
         "react-refresh/babel",
         [
           "@babel/plugin-transform-runtime",
@@ -22,7 +11,32 @@ module.exports = (api) => {
             regenerator: true,
           },
         ],
+        "@babel/plugin-syntax-dynamic-import",
+      ]
+    : [
+        [
+          "@babel/plugin-transform-runtime",
+          {
+            regenerator: true,
+          },
+        ],
+        "@babel/plugin-syntax-dynamic-import",
+      ];
+
+  return {
+    presets: [
+      [
+        "@babel/preset-env",
+        {
+          debug: true,
+          useBuiltIns: "usage",
+          corejs: { version: 3, proposals: true },
+          targets: { node: "current" },
+        },
       ],
-    }),
+      "@babel/preset-react",
+      "@babel/preset-typescript",
+    ],
+    plugins,
   };
 };

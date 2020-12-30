@@ -43,12 +43,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "..", "./dist"),
     filename: "bundle.js",
+    chunkFilename: "[name].chunk.js",
   },
 
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "React App",
+      title: "Random Forest App",
       template: path.resolve(__dirname, "..", "./src/index.html"),
     }),
     new ForkTsCheckerWebpackPlugin({
