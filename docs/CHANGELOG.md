@@ -1,3 +1,16 @@
+# [1.2.0](https://git.randomforest.eu/hephaestus/anvil/compare/v1.1.0...v1.2.0) (2020-12-31)
+
+
+### Bug Fixes
+
+* **tests:** update test case in InitialScreen ([db5e826](https://git.randomforest.eu/hephaestus/anvil/commit/db5e826c99f05dd439297db7f078b4a13e509ccc))
+
+
+### Features
+
+* **cli:** change project's name in target package.json ([203f5ac](https://git.randomforest.eu/hephaestus/anvil/commit/203f5acfb5f0419f2e7ee428d259b7853b9ec3b6))
+* **storybook:** configure testing libraries ([cca5f28](https://git.randomforest.eu/hephaestus/anvil/commit/cca5f28d259a9670a357349b9942dc0f5c8b84ca))
+
 # [1.1.0](https://git.randomforest.eu/hephaestus/anvil/compare/v1.0.2...v1.1.0) (2020-12-30)
 
 
