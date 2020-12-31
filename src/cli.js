@@ -2,6 +2,11 @@ import arg from "arg";
 import inquirer from "inquirer";
 import chalk from "chalk";
 import { createProject } from "./main";
+import packageJson from "../package.json";
+
+const currentVersion = packageJson.version;
+
+console.log(chalk.bold.underline(`Anvil CLI v${currentVersion}\n`));
 
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg(

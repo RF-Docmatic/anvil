@@ -15,10 +15,45 @@ async function copyTemplateFiles(options) {
   });
 }
 
+async function setProjectName(options) {
+  const result = await execa("npe", ["name", options.projectName], {
+    cwd: options.targetDirectory,
+    preferLocal: true,
+    localDir: path.resolve(__dirname, "..", "node_modules", "npe"),
+  });
+
+  if (result.failed) {
+    return Promise.reject(
+      new Error(
+        "Failed to set the project's name. You might want to do it manually."
+      )
+    );
+  }
+  return;
+}
+
+async function initializeProjectVersion(options) {
+  const result = await execa("npe", ["version", "1.0.0"], {
+    cwd: options.targetDirectory,
+    preferLocal: true,
+    localDir: path.resolve(__dirname, "..", "node_modules", "npe"),
+  });
+
+  if (result.failed) {
+    return Promise.reject(
+      new Error(
+        "Failed to initialize the project's version. You might want to do it manually."
+      )
+    );
+  }
+  return;
+}
+
 async function initGit(options) {
   const result = await execa("git", ["init"], {
     cwd: options.targetDirectory,
   });
+
   if (result.failed) {
     return Promise.reject(new Error("Failed to initialize git"));
   }
@@ -27,11 +62,12 @@ async function initGit(options) {
 
 export async function createProject(options) {
   const projectName = options.projectName;
+  const directory = options.targetDirectory;
+
   options = {
     ...options,
     targetDirectory: `${process.cwd()}/${projectName}`,
   };
-  console.log("options", options);
 
   const currentFileUrl = import.meta.url;
   const templateDir = path.resolve(
@@ -44,7 +80,7 @@ export async function createProject(options) {
   try {
     await access(templateDir, fs.constants.R_OK);
   } catch (err) {
-    console.error("%s Invalid template name", chalk.red.bold("ERROR"));
+    console.error(`${chalk.red.bold("ERROR")} Invalid template name`);
     process.exit(1);
   }
 
@@ -54,12 +90,24 @@ export async function createProject(options) {
       task: () => copyTemplateFiles(options),
     },
     {
+      title: `Set project's name: ${options.projectName}`,
+      task: () => setProjectName(options),
+    },
+    {
+      title: "Initialize version: 1.0.0",
+      task: () => initializeProjectVersion(options),
+    },
+    {
       title: "Initialize git",
       task: () => initGit(options),
     },
   ]);
 
   await tasks.run();
-  console.log("%s Project ready", chalk.green.bold("DONE"));
+  console.log(
+    `\n${chalk.green.bold("DONE")} Project ${chalk.yellow(
+      projectName
+    )} is ready in ${chalk.yellow(options.targetDirectory)}`
+  );
   return true;
 }
