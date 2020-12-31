@@ -11,6 +11,7 @@ export const Container = styled.div`
 
 export const Logo = styled.img.attrs({
   src: rfLogoLight,
+  alt: "Random Forest logo",
 })`
   width: 500px;
 `;
