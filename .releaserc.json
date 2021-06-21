@@ -3,6 +3,12 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     [
+      "@semantic-release/github",
+      {
+        "assets": ["docs/CHANGELOG.md"]
+      }
+    ],
+    [
       "@semantic-release/changelog",
       {
         "changelogFile": "docs/CHANGELOG.md"

@@ -1,7 +1,8 @@
 name: Anvil's npm registry release
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,10 +12,6 @@ jobs:
         with:
           node-version: "14"
           registry-url: "https://registry.npmjs.org"
-      # - run: npm install
-      # - run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: |
-        npm install --global semantic-release @semantic-release/changelog @semantic-release/git &&
+        npm install --global semantic-release @semantic-release/github @semantic-release/changelog @semantic-release/git &&
         NPM_TOKEN=${{ secrets. NPM_TOKEN }} semantic-release
