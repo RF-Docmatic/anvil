@@ -3,13 +3,6 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/gitlab",
-      {
-        "gitlabUrl": "https://git.randomforest.eu",
-        "assets": ["docs/CHANGELOG.md"]
-      }
-    ],
-    [
       "@semantic-release/changelog",
       {
         "changelogFile": "docs/CHANGELOG.md"

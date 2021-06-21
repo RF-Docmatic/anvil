@@ -1,7 +1,7 @@
 {
-  "name": "@rfc/anvil",
+  "name": "@rf-docmatic/anvil",
   "version": "1.2.0",
-  "description": "Experimental internal CLI tool to import and use premade configs and templates.",
+  "description": "CLI tool to quickly setup React application templates",
   "main": "src/index.js",
   "bin": {
     "@rfc/anvil": "bin/anvil",
@@ -12,10 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.randomforest.eu:hephaestus/anvil.git"
-  },
-  "publishConfig": {
-    "registry": "https://repository.randomforest.eu/repository/rf-npm-hosted/"
+    "url": "git@github.com:RF-Docmatic/anvil.git"
   },
   "keywords": [
     "cli",
@@ -34,6 +31,7 @@
     "npe": "^1.1.3"
   },
   "devDependencies": {
+    "@semantic-release/npm": "^7.1.3",
     "lerna": "^3.22.1"
   },
   "files": [
