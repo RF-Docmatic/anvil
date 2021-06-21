@@ -4,15 +4,21 @@ on:
     branches:
       - main
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: "14"
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
           registry-url: "https://registry.npmjs.org"
+      - name: Install semantic-release dependencies
+        run: npm install --global semantic-release @semantic-release/github @semantic-release/changelog @semantic-release/git
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm install --global semantic-release @semantic-release/github @semantic-release/changelog @semantic-release/git && semantic-release
+        run: semantic-release
