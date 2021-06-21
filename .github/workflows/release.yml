@@ -15,4 +15,6 @@ jobs:
       # - run: npm publish
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: NPM_TOKEN=${{ secrets. NPM_TOKEN }} npx semantic-release
+      - run: >
+        npm install --global semantic-release @semantic-release/changelog @semantic-release/git &&
+        NPM_TOKEN=${{ secrets. NPM_TOKEN }} semantic-release
