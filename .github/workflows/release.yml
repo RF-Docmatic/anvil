@@ -15,4 +15,4 @@ jobs:
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm install --global semantic-release @semantic-release/github @semantic-release/changelog @semantic-release/git && semantic-release
+        run: npm install --global semantic-release @semantic-release/github @semantic-release/changelog @semantic-release/git && semantic-release
