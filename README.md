@@ -12,7 +12,7 @@ npm install @rf-docmatic/anvil -g
 
 # And once it's installed:
 
-@rf-docmatic/anvil
+anvil
 ```
 
 or use the npm package runner: 
