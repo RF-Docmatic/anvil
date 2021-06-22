@@ -1,3 +1,11 @@
+## [1.2.4](https://github.com/RF-Docmatic/anvil/compare/v1.2.3...v1.2.4) (2021-06-22)
+
+
+### Bug Fixes
+
+* **react-extended:** fix husky hooks ([a6d00f0](https://github.com/RF-Docmatic/anvil/commit/a6d00f0805894196c5b0f53a344ec1ec05481ee9))
+* **react-extended:** fix peer dependencies conflicts ([dce8683](https://github.com/RF-Docmatic/anvil/commit/dce86833780c914e1f69cb8c5a4d99b50f62822d))
+
 ## [1.2.3](https://github.com/RF-Docmatic/anvil/compare/v1.2.2...v1.2.3) (2021-06-22)
 
 
