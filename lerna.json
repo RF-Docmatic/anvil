@@ -4,8 +4,7 @@
   "command": {
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md"],
-      "message": "chore(release): lerna publish[ci skip]",
-      "registry": "https://repository.randomforest.eu/repository/rf-npm-hosted/"
+      "message": "chore(release): lerna publish[ci skip]"
     },
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]

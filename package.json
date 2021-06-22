@@ -4,7 +4,7 @@
   "description": "CLI tool to quickly setup React application templates",
   "main": "src/index.js",
   "bin": {
-    "@rfc/anvil": "bin/anvil",
+    "@rf-docmatic/anvil": "bin/anvil",
     "anvil": "bin/anvil"
   },
   "scripts": {
