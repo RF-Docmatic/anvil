@@ -1,3 +1,17 @@
+## [1.2.2](https://github.com/RF-Docmatic/anvil/compare/v1.2.1...v1.2.2) (2021-06-22)
+
+
+### Bug Fixes
+
+* add  to releaserc config ([bb782ed](https://github.com/RF-Docmatic/anvil/commit/bb782ed9a7dec2d8679c82a4fe610b6c13d9b70a))
+* add  to the env in release.yml ([7d387df](https://github.com/RF-Docmatic/anvil/commit/7d387df71b0654a2876c26b032940b9b6a9401d4))
+* fix incorrect use of  in yml file ([c091cb8](https://github.com/RF-Docmatic/anvil/commit/c091cb8338c5c39e3b204a31498ae3ce244101a4))
+* fix incorrect use of  process in yml file ([0b79be7](https://github.com/RF-Docmatic/anvil/commit/0b79be7bfa4724806662dde82b8d65ab905f484f))
+* fix npm_token env variable in yml file ([a9bb632](https://github.com/RF-Docmatic/anvil/commit/a9bb6323d6aa86bddb69aaf679641496bea2ae38))
+* fix syntax error in yml file ([ebce592](https://github.com/RF-Docmatic/anvil/commit/ebce59281a603ba1087cae6c1309dbd79b95d604))
+* get rid of multiline run process in order to avoid the syntax error ([62bac99](https://github.com/RF-Docmatic/anvil/commit/62bac995b19266945a1e31159fadd828f33689d3))
+* install semantic-release locally before release ([8830867](https://github.com/RF-Docmatic/anvil/commit/88308677a1723adea238b4d1555723d8938b16d8))
+
 # [1.2.0](https://git.randomforest.eu/hephaestus/anvil/compare/v1.1.0...v1.2.0) (2020-12-31)
 
 
