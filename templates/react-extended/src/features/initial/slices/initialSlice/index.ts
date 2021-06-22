@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AjaxResponse } from "rxjs/ajax";
 import { InitialScreen } from "../../types";
 
 const initialState: InitialScreen = {
@@ -18,7 +17,7 @@ const initialSlice = createSlice({
       state.isRandomFactFetching = true;
     },
     fetchRandomFactDone(state, action: PayloadAction<string>) {
-      const result: AjaxResponse = JSON.parse(action.payload);
+      const result = JSON.parse(action.payload);
       const response = result.response;
 
       const text = response.text;

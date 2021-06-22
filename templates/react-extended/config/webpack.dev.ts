@@ -33,6 +33,7 @@ module.exports = {
     hot: true,
     compress: true,
     open: true,
+    port: 3000,
   },
 
   plugins: [

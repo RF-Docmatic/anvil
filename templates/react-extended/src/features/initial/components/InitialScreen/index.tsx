@@ -11,7 +11,7 @@ const InitialScreen: React.FC = () => {
 
   useEffect(() => {
     dispatch(initialActions.fetchRandomFactStart());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Container>

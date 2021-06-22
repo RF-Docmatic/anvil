@@ -1,7 +1,6 @@
 import { map, mergeMap, catchError, filter } from "rxjs/operators";
 import { combineEpics, Epic } from "redux-observable";
 import { Observable, of } from "rxjs";
-import { AjaxResponse } from "rxjs/ajax";
 import { initialActions } from "../../slices";
 import { ajax } from "rxjs/ajax";
 import { RootState } from "../../../../app/types";
@@ -13,7 +12,7 @@ const fetchRandomFactEpic: Epic<FetchRandomFactAction, FetchRandomFactAction, Ro
     filter(isOfType(initialActions.fetchRandomFactStart.type)),
     mergeMap<FetchRandomFactAction, Observable<FetchRandomFactAction>>(() =>
       ajax.get("https://uselessfacts.jsph.pl/random.json?language=en").pipe(
-        map((ajaxResponse: AjaxResponse) => initialActions.fetchRandomFactDone(JSON.stringify(ajaxResponse))),
+        map((ajaxResponse) => initialActions.fetchRandomFactDone(JSON.stringify(ajaxResponse))),
         catchError((error) => of(initialActions.fetchRandomFactFail(error))),
       ),
     ),
