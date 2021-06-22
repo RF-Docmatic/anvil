@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/RF-Docmatic/anvil/compare/v1.2.2...v1.2.3) (2021-06-22)
+
+
+### Bug Fixes
+
+* set npm package's config to public access ([30f678c](https://github.com/RF-Docmatic/anvil/commit/30f678cf71e4b538806baaf0d0540b002a51b109))
+
 ## [1.2.2](https://github.com/RF-Docmatic/anvil/compare/v1.2.1...v1.2.2) (2021-06-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@rf-docmatic/anvil",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "CLI tool to quickly setup React application templates",
   "main": "src/index.js",
   "bin": {
