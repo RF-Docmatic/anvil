@@ -68,14 +68,15 @@
     "start": "webpack serve --config config/webpack.config.ts --env env=dev",
     "build": "webpack --config config/webpack.config.ts --env env=prod",
     "test": "jest",
-    "postinstall": "husky install"
+    "postinstall": "node ./node_modules/husky/lib/installer/bin.js install",
+    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
   },
   "author": "",
   "license": "ISC",
   "gitHead": "374d1224e5e948e115b26acd72fa3885e27f091e",
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
+      "pre-commit": "npm run pretest && npm test",
       "pre-push": "npm test"
     }
   }
