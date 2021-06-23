@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/RF-Docmatic/anvil/compare/v1.2.4...v1.3.0) (2021-06-23)
+
+
+### Features
+
+* **react-extended:** add common folder with useApiAjax hook ([7e2cd7c](https://github.com/RF-Docmatic/anvil/commit/7e2cd7cd1644a788dc2dd087de488967f99a4c87))
+
 ## [1.2.4](https://github.com/RF-Docmatic/anvil/compare/v1.2.3...v1.2.4) (2021-06-22)
 
 
